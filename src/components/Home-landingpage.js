@@ -1,4 +1,4 @@
-import image from "../golfimage.jpg"
+import image from "../images/golfimage.jpg";
 
 export default function LandingPage(){
   return (

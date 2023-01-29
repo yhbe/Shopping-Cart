@@ -68,7 +68,7 @@
   text-align: center;
   padding: 4rem;
   letter-spacing: 2px;
-  background-image: url(../src/golfimage.jpg);
+  background-image: url(../src/images/golfimage.jpg);
   background-size: cover;
   height: 100%;
  }
@@ -118,7 +118,7 @@
 
 @media screen and (min-width: 250px) {
   .landingpage--bkg-container {
-    background-image: url(../groupImage2.jpg);
+    background-image: url(../lyingImage.jpg);
     transition: .5s;
     background-size: cover;
     background-position: center;
@@ -127,7 +127,7 @@
 
 @media screen and (min-width: 800px) {
   .landingpage--bkg-container {
-    background-image: url(../src/golfimage.jpg);
+    background-image: url(../src/images/golfimage.jpg);
     transition: .5s;
     background-size: cover;
     background-position: center;
