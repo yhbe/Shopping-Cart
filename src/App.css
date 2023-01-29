@@ -5,12 +5,18 @@
   font-family: 'Roboto', sans-serif;
 }
 
+.App{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
 .header--container{
   display: flex;
   justify-content: space-between;
   background-color: black;
   color: white;
-  padding: 30px;
+  padding: 2rem;
   align-items: center;
   font-size: 1.2rem;
 }
@@ -49,3 +55,101 @@
     justify-content: space-evenly;
   }
  }
+
+
+ @media screen and (min-width: 0px) and (max-width:580px) {
+    .header--container {
+        flex-direction: column !important;
+      }
+ }
+
+
+ .landingpage--bkg-container{
+  text-align: center;
+  padding: 4rem;
+  letter-spacing: 2px;
+  background-image: url(../src/golfimage.jpg);
+  background-size: cover;
+  height: 100%;
+ }
+
+  .landingpage--container>img{
+    display: none;
+  }
+
+
+ .landingpage--container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+
+ .landingpage-text{
+  color: gray;
+  letter-spacing: 4px;
+ }
+
+ .landingpage--main-text > *{
+   margin: 10px 0px;
+ }
+
+ .landingpage-h2{
+  display: flex;
+  font-size: 3rem;
+  width: 400px;
+  font-weight: 900;
+  margin: auto;
+ }
+
+ .landingpage--container > *{
+  margin: 10px 0px;
+ }
+
+ .landingpage-button{
+  padding: 10px 45px;
+  background-color: black;
+  color: white;
+  border: none;
+  font-size: 2rem;
+  border-radius: 40px;
+  cursor: pointer;
+ }
+
+
+@media screen and (min-width: 250px) {
+  .landingpage--bkg-container {
+    background-image: url(../groupImage2.jpg);
+    transition: .5s;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .landingpage--bkg-container {
+    background-image: url(../src/golfimage.jpg);
+    transition: .5s;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .landingpage--bkg-container {
+    background-image: none;
+
+  }
+
+  .landingpage--container {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-evenly;
+    font-size: 1.7rem;
+  }
+
+  .landingpage--container>img {
+    display: block !important;
+    border-radius: 30px;
+    width: 50%;
+  }
+}
