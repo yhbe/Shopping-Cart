@@ -7,7 +7,7 @@ export default function Header(){
         <li>Products</li>
         <li>Contact</li>
         <li className="header--items-shopping-cart-li">
-          <i class="fa-solid fa-cart-shopping"></i>
+          <i className="fa-solid fa-cart-shopping"></i>
         </li>
       </ul>
     </div>
