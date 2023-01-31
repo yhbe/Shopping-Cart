@@ -11,6 +11,7 @@ export default function ProductPage(props){
       .then((json) => {
         let arr = []
         json.map(a => {
+          a.quantity = 1
           if (a.category === "women's clothing" || a.category === "men's clothing"){
             arr.push(a)
           }
@@ -43,7 +44,7 @@ export default function ProductPage(props){
         } else {
           newArr = newArr.map(item => {
             if (item.id === data.id){
-              return {...item, price: item.price *2}
+              return {...item, price: item.price *2, quantity: item.quantity + 1}
             } else return item
           })
         }

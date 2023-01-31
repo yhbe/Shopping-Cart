@@ -28,7 +28,7 @@ export default function Header(props){
       <div className="checkout--items-text-container">
       <p>{item.title.slice(0, 25).concat("...")}</p>
       <p>${item.price}</p>
-      <p>- 1 +</p>
+      <p>- {item.quantity} +</p>
       </div>
       </div>
     )
