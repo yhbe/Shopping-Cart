@@ -21,6 +21,25 @@ export default function Header(props){
     modal.style.display = modal.style.display === "flex" ? "none" : "flex"
   }
 
+  function createCheckoutItems(item){
+    return (
+      <div className="item--main-container">
+      <img src={item.image} alt={item.category}></img>
+      <div className="checkout--items-text-container">
+      <p>{item.title.slice(0, 25).concat("...")}</p>
+      <p>${item.price}</p>
+      <p>- 1 +</p>
+      </div>
+      </div>
+    )
+  }
+
+  let items 
+  if (props.itemsInCart){
+    items = props.itemsInCart
+    items = items.map(item => createCheckoutItems(item))
+  }
+
   return (
     <div className="header--container">
       <h1 className="header--container-title" onClick={navigateHome}>
@@ -37,7 +56,9 @@ export default function Header(props){
       <div className="checkout--modal">
         <div className="checkout--container">
           <h3>Your shopping cart</h3>
-          <div className="checkout--items"></div>
+          <div className="checkout--items">
+            {items[0] && items}
+          </div>
           <p>Total: $0.00</p>
           <div className="checkout--buttons-container">
             <button className="checkout--checkout-button">Checkout</button>
