@@ -38,7 +38,15 @@ export default function ProductPage(props){
       <button onClick={() => props.setItemsInCart(prevState => {
         let newArr = []
         newArr.push(...prevState)
-        newArr.push(data)
+        if (newArr.every(item => item.id !== data.id)) {
+          newArr.push(data)
+        } else {
+          newArr = newArr.map(item => {
+            if (item.id === data.id){
+              return {...item, price: item.price *2}
+            } else return item
+          })
+        }
         return newArr
       })} className="product--items-button">Add to cart</button>
       </div>

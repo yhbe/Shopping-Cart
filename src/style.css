@@ -254,7 +254,7 @@
 
  .checkout--modal{
   display: none;
-  position: absolute;
+  position: fixed;
   right: 0;
   bottom: 0;
   width: 100vw;
@@ -263,14 +263,15 @@
  }
 
  .checkout--container{
-  position: absolute;
+  position: fixed;
   text-align: center;
-  height: 100vh;
+  height: 100%;
   width: 30%;
   right: 0;
   color: black;
   background-color: white;
   font-weight: bold;
+  overflow: scroll;
  }
 
  .checkout--container > *{
@@ -308,7 +309,7 @@
   display: flex;
   flex-wrap: wrap;
   overflow: scroll;
-  height: 600px;
+  height: 50%;
   justify-content: space-evenly;
 }
 
