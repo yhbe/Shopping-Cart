@@ -1,7 +1,8 @@
 import { useNavigate } from "react-router-dom";
 
-export default function Header(){
+export default function Header(props){
   let navigate = useNavigate()
+  console.log(props.itemsInCart, "Items in cart Header")
   function navigateHome(){
     navigate("../")
   }

@@ -1,9 +1,9 @@
 import Header from "../components/Header";
 
-export default function Contact () {
+export default function Contact (props) {
   return (
     <>
-      <Header></Header>
+      <Header itemsInCart={props.itemsInCart}/>
       <ul className="contact--icons-ul">
         <li>
           <i class="fa-brands fa-github">

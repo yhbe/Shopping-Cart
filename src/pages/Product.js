@@ -1,7 +1,7 @@
 import React from "react"
 import Header from "../components/Header"
 
-export default function ProductPage(){
+export default function ProductPage(props){
   const [apiData,setApiData] = React.useState([])
   const [loaded, setLoaded] = React.useState(false)
 
@@ -35,7 +35,12 @@ export default function ProductPage(){
       <p>{data.title}</p>
       <p>${data.price}</p>
       </div>
-      <button className="product--items-button">Add to cart</button>
+      <button onClick={() => props.setItemsInCart(prevState => {
+        let newArr = []
+        newArr.push(...prevState)
+        newArr.push(data)
+        return newArr
+      })} className="product--items-button">Add to cart</button>
       </div>
     )
   }
@@ -43,7 +48,7 @@ export default function ProductPage(){
 
   return (
     <>
-    <Header />
+    <Header itemsInCart={props.itemsInCart}/>
     <div className="product--container">
     <>{loaded && clothingData}</>
     </div>
