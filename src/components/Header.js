@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 export default function Header(props){
   let navigate = useNavigate()
   function navigateHome(){
-    navigate("../")
+    navigate("../ShoppingCart")
   }
 
   function navigateContact() {

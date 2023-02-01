@@ -11,7 +11,7 @@ const RouteSwitch = () => {
     <BrowserRouter>
       <Routes>
         <Route
-          path="/"
+          path="/ShoppingCart"
           element={
             <HomePage
               itemsInCart={itemsInCart}
