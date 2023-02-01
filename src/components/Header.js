@@ -18,18 +18,23 @@ export default function Header(props){
     let modal = document.querySelector(".checkout--modal");
     modal.style.display = modal.style.display === "flex" ? "none" : "flex"
   }
-
+  
   function decrementQuantity(item){
     props.setItemsInCart(prevState => {
-     return prevState.map((state, index) => {
+      let indexToRemove = undefined
+      let newState = prevState.map((state, index) => {
         if (state.title === item.title){
           if (state.quantity === 1){
-            return prevState.splice(index, 1)
+            indexToRemove = index
           } else {
             return {...state, quantity: state.quantity - 1, price: Math.round((state.price - state.price /state.quantity)*100 )/ 100}
           }
         } else return state
       })
+      if (indexToRemove !== undefined){
+       newState.splice(indexToRemove, 1)
+      }
+      return newState
     })
   }
 
