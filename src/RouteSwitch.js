@@ -7,11 +7,18 @@ import './style.css';
 
 const RouteSwitch = () => {
   let [itemsInCart, setItemsInCart] = React.useState([])
-  console.log(itemsInCart)
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<HomePage itemsInCart={itemsInCart} />} />
+        <Route
+          path="/"
+          element={
+            <HomePage
+              itemsInCart={itemsInCart}
+              setItemsInCart={setItemsInCart}
+            />
+          }
+        />
         <Route
           path="/product"
           element={
@@ -23,7 +30,12 @@ const RouteSwitch = () => {
         />
         <Route
           path="/contact"
-          element={<Contact itemsInCart={itemsInCart} />}
+          element={
+            <Contact
+              itemsInCart={itemsInCart}
+              setItemsInCart={setItemsInCart}
+            />
+          }
         />
       </Routes>
     </BrowserRouter>

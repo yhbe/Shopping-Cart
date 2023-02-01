@@ -3,11 +3,13 @@ import Header from "../components/Header";
 export default function Contact (props) {
   return (
     <>
-      <Header itemsInCart={props.itemsInCart}/>
+      <Header
+        setItemsInCart={props.setItemsInCart}
+        itemsInCart={props.itemsInCart}
+      />
       <ul className="contact--icons-ul">
         <li>
-          <i class="fa-brands fa-github">
-          </i>
+          <i class="fa-brands fa-github"></i>
         </li>
         <li>
           <i class="fa-brands fa-facebook"></i>

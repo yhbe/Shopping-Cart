@@ -44,7 +44,14 @@ export default function ProductPage(props){
         } else {
           newArr = newArr.map(item => {
             if (item.id === data.id){
-              return {...item, price: item.price *2, quantity: item.quantity + 1}
+              return {
+                ...item,
+                price:
+                  Math.round(
+                    (item.price + item.price / item.quantity) * 100
+                  ) / 100,
+                quantity: item.quantity + 1,
+              };
             } else return item
           })
         }
@@ -57,10 +64,10 @@ export default function ProductPage(props){
 
   return (
     <>
-    <Header itemsInCart={props.itemsInCart}/>
-    <div className="product--container">
-    <>{loaded && clothingData}</>
-    </div>
+      <Header setItemsInCart={props.setItemsInCart} itemsInCart={props.itemsInCart} />
+      <div className="product--container">
+        <>{loaded && clothingData}</>
+      </div>
     </>
-  )
+  );
 }
