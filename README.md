@@ -1,4 +1,16 @@
-# Getting Started with Create React App
+# Shopping Cart
+
+Created with React, javscript, css
+
+## Results 
+
+[video.webm](https://user-images.githubusercontent.com/101876022/216196339-6a4f002a-2e19-4a68-8f7e-602c2b924081.webm)
+
+#### Credits
+
+Images by CottonBro Studio & koolshooters on Unsplash
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -28,6 +40,4 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-Images by CottonBro Studio & koolshooters on Unsplash
 
