@@ -15,8 +15,8 @@ Use React Router to display pages
 
 #### Credits
 
-Images by CottonBro Studio & koolshooters on Unsplash
-Store Api https://fakestoreapi.com/
+- Images by CottonBro Studio & koolshooters on Unsplash
+- Store Api https://fakestoreapi.com/
 
 ## Getting Started with Create React App
 
