@@ -1,5 +1,9 @@
 # Shopping Cart
 
+View here [Shopping Cart](https://yhbe.github.io/ShoppingCart/)
+
+This project implements a simple shopping cart system using HTML, CSS, and JavaScript. The system allows users to browse products, add them to their cart, and checkout their purchases.
+
 Created with React, javscript, css
 
 ## Goals
